@@ -1,4 +1,7 @@
 /**
+ * jquery.height.js
+ * https://github.com/yangci/jquery.height.js
+ * 
  * Copyright (c) 2013 KLIP LLC
  * Dual licensed under the MIT and GPL licenses:
  * http://www.opensource.org/licenses/mit-license.php
