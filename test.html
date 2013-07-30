@@ -1,0 +1,68 @@
+<html>
+<head>
+<style type="text/css">
+.s1 {
+	height: 2em;
+	background-color: #aff;
+}
+.s2 {
+	height: 4em;
+	background-color: #faf;
+}
+.s3 {
+	height: 6em;
+	background-color: #aaf;
+}
+div {
+	overflow: hidden;
+}
+p {
+	margin: 0.2em;
+	float: left;
+	width: 10em;
+}
+</style>
+<script src="../jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="jquery.height-1.0.0.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function() {
+	$('button.exec').click(function() {
+		$('p').fixHeight();
+	});
+	$('button.reset').click(function() {
+		location.reload();
+	});
+});
+</script>
+</head>
+<body>
+<div>
+<p class="s1">SIZE 1</p>
+<p class="s2">SIZE 2</p>
+<p class="s3">SIZE 3</p>
+</div>
+<div>
+<p class="s1">SIZE 1</p>
+<p class="s1">SIZE 1</p>
+</div>
+<div>
+<p class="s3">SIZE 3</p>
+<p class="s2">SIZE 2</p>
+<p class="s1">SIZE 1</p>
+<p class="s3">SIZE 3</p>
+</div>
+<div>
+<p class="s3">SIZE 3</p>
+<p class="s2">SIZE 2</p>
+</div>
+<div>
+<p class="s1">SIZE 1</p>
+<p class="s1">SIZE 1</p>
+<p class="s2">SIZE 2</p>
+</div>
+<div>
+<button class="exec">$('p').fixHeight();</button>
+<button class="reset">reset</button>
+</div>
+</body>
+</html>
