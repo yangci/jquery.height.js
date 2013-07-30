@@ -8,7 +8,7 @@
  * http://www.gnu.org/licenses/gpl.html
  *
  * @Author: Yoji Itoh (yoji.itoh@klip.co.jp)
- * @Version: 1.0.0
+ * @Version: 1.0.1
  *
  * Usage:
  *     $().fixHeight();
