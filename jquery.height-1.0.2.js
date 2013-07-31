@@ -15,30 +15,26 @@
  **/
 (function(jQuery) {
 	jQuery.fn.fixHeight = function() {
-		var height = {};
+		var obj = [];
 		var max = {};
 
-		this.each(function() {
+		this.each(function(i) {
 			var e = jQuery(this);
 			var y = e.offset().top;
+			var height = e.height();
 
-			if (height[y] === undefined) {
-				height[y] = [];
-			}
-			height[y].push(e);
+			obj[i] = y;
 
 			if (max[y] === undefined) {
-				max[y] = 0;
-			}
-			if (max[y] < e.height()) {
-				max[y] = e.height();
+				max[y] = height;
+			} else if (max[y] < height) {
+				max[y] = height;
 			}
 		});
 
-		return this.each(function() {
+		return this.each(function(i) {
 			var e = jQuery(this);
-			var y = e.offset().top;
-
+			var y = obj[i];
 			e.height(max[y]);
 		});
 	}
